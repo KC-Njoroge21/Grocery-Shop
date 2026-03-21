@@ -51,8 +51,8 @@ const Landing = () => {
 
       <section className="bg-gray-200 ">
         <div className="flex flex-col items-center gap-4 p-10">
-          <h2 className="text-4xl font-bold">Everything You Need to Save</h2>
-          <p className="text-gray-500 text-center text-lg">
+          <h2 className="sm:text-4xl text-3xl text-center font-bold">Everything You Need to Save</h2>
+          <p className="text-gray-500 text-center sm:text-lg ">
             Powerful features designed to help you track prices, manage shopping
             lists, and <br /> make smarter purchasing decisions.
           </p>
