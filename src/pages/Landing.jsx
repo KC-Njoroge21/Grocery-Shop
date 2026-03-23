@@ -3,6 +3,7 @@ import { TbShoppingCartSearch } from "react-icons/tb";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { MdOutlineDeliveryDining } from "react-icons/md";
 import { MdOutlineShoppingCartCheckout } from "react-icons/md";
+import { LiaCopyrightSolid } from "react-icons/lia";
 
 const Landing = () => {
   return (
@@ -197,7 +198,7 @@ const Landing = () => {
         </div>
       </section>
 
-      <section className="bg-green-500 p-12 flex items-center justify-center">
+      <section className="bg-green-500 h-100 flex items-center justify-center">
         <div className="flex flex-col gap-4">
           <h2 className="sm:text-4xl text-3xl font-bold text-center text-white">
             Ready to Start Shopping?
@@ -208,11 +209,15 @@ const Landing = () => {
             shopping today-it's completely free!{" "}
           </h5>
           <div className="flex justify-center">
-            <button className="p-2 flex gap-3 items-center bg-gray-100 w-fit rounded-lg font-semibold">
+            <button className="p-2 focus:bg-black focus:opacity-70 focus:text-white flex gap-3 items-center bg-gray-100 w-fit rounded-lg font-semibold">
               <MdOutlineShoppingCartCheckout size={20} /> Start Shopping
             </button>
           </div>
         </div>
+      </section>
+
+      <section className="h-30 flex items-center justify-center">
+        <h2 className=" text-center text-gray-500 flex items-center "><LiaCopyrightSolid /> 2026 Kev Grocery Store. All rights reserved.</h2>
       </section>
     </div>
   );
