@@ -2,6 +2,7 @@ import React from "react";
 import { TbShoppingCartSearch } from "react-icons/tb";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { MdOutlineDeliveryDining } from "react-icons/md";
+import { MdOutlineShoppingCartCheckout } from "react-icons/md";
 
 const Landing = () => {
   return (
@@ -54,23 +55,30 @@ const Landing = () => {
 
       <section className="bg-gray-200 ">
         <div className="flex flex-col items-center gap-4 p-10">
-          <h2 className="sm:text-4xl text-3xl text-center font-bold">Everything You Need to Save</h2>
+          <h2 className="sm:text-4xl text-3xl text-center font-bold">
+            Everything You Need to Save
+          </h2>
           <p className="text-gray-500 text-center sm:text-lg ">
             Powerful features designed to help you track prices, manage shopping
             lists, and <br /> make smarter purchasing decisions.
           </p>
         </div>
 
-        <div className="flex gap-8 flex-wrap pb-16 "> 
-
+        <div className="flex gap-8 flex-wrap pb-16 ">
           <div className="flex-1 flex flex-col shadow-lg border border-gray-300 rounded-xl gap-4 min-w-70 bg-white">
             <div className="w-full h-80">
-              <img className="object-cover rounded-t-xl h-full w-full" src="/images/landing-search.jpg" alt="Search Img" />
+              <img
+                className="object-cover rounded-t-xl h-full w-full"
+                src="/images/landing-search.jpg"
+                alt="Search Img"
+              />
             </div>
             <div className="p-4">
               <div>
                 <img src="" alt="" />
-                <h3 className="text-2xl font-semibold">Smart Search & Filters</h3>
+                <h3 className="text-2xl font-semibold">
+                  Smart Search & Filters
+                </h3>
               </div>
               <p className="text-gray-500">
                 Allows users to quickly find products by searching and filtering
@@ -82,12 +90,18 @@ const Landing = () => {
 
           <div className="flex-1 flex flex-col shadow-lg border border-gray-300 rounded-xl  gap-4 min-w-70 bg-white">
             <div className="w-full h-80">
-              <img className="object-cover h-full rounded-t-xl w-full" src="/images/landing-fav.jpg" alt="Search Img" />
+              <img
+                className="object-cover h-full rounded-t-xl w-full"
+                src="/images/landing-fav.jpg"
+                alt="Search Img"
+              />
             </div>
             <div className="p-4">
               <div className="">
                 <img src="" alt="" />
-                <h3 className="text-2xl font-semibold">Whishlist / Favorites</h3>
+                <h3 className="text-2xl font-semibold">
+                  Whishlist / Favorites
+                </h3>
               </div>
               <p className="text-gray-500">
                 Enables users to save and manage their favorite products for
@@ -99,12 +113,18 @@ const Landing = () => {
 
           <div className="flex-1 flex shadow-lg border border-gray-300 rounded-xl flex-col gap-4 min-w-70 bg-white">
             <div className="w-full h-80">
-              <img className="object-cover rounded-t-xl h-full w-full" src="/images/landing-checkout.jpg" alt="Search Img" />
+              <img
+                className="object-cover rounded-t-xl h-full w-full"
+                src="/images/landing-checkout.jpg"
+                alt="Search Img"
+              />
             </div>
             <div className="p-4">
               <div>
                 <img src="" alt="" />
-                <h3 className="text-2xl font-semibold">Cart & Checkout System</h3>
+                <h3 className="text-2xl font-semibold">
+                  Cart & Checkout System
+                </h3>
               </div>
               <p className="text-gray-500">
                 Provides functionality to add, remove, and manage items in a
@@ -116,54 +136,82 @@ const Landing = () => {
         </div>
       </section>
 
-      <section className="flex flex-col sm:p-20 gap-14 ">
-        <div className="flex flex-col items-center gap-4">
-          <h2 className="text-3xl font-semibold">How It Works</h2>
-          <h5 className="text-gray-500 text-lg">Start saving in three simple steps</h5>
+      <section className="flex flex-col  gap-14 items-center justify-center ">
+        <div className="mt-18 mb-18">
+          
+            <div className="flex flex-col items-center  gap-4">
+              <h2 className="text-4xl font-bold">How It Works</h2>
+              <h5 className="text-gray-500 text-lg">
+                Start saving in three simple steps
+              </h5>
+            </div>
+
+            <div className="flex justify-between  flex-wrap">
+              <div className="flex flex-1 flex-col items-center text-center gap-4 min-w-75">
+                <div className="bg-green-500 p-2  rounded-full">
+                  <TbShoppingCartSearch className="text-white" size={40} />
+                </div>
+                <div className="flex flex-col gap-3">
+                  <h6 className="text-green-500 font-semibold">Step 1</h6>
+                  <h5 className="text-xl font-semibold">
+                    Browse & Select Products
+                  </h5>
+                  <p className="text-gray-500">
+                    Users explore available grocery items, search for what they
+                    need, and add products to their cart.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-1 flex-col items-center text-center gap-4 min-w-75">
+                <div className="bg-green-500 p-2 rounded-full">
+                  <IoBagCheckOutline className="text-white" size={40} />
+                </div>
+                <div className="flex flex-col gap-3">
+                  <h6 className="text-green-500 font-semibold">Step 2</h6>
+                  <h5 className="text-xl font-semibold">
+                    Review Cart & Checkout
+                  </h5>
+                  <p className="text-gray-500">
+                    They view selected items, adjust quantities if needed, and
+                    proceed to checkout to place their order.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-1 flex-col items-center gap-4 text-center min-w-75">
+                <div className="bg-green-500 p-2 rounded-full">
+                  <MdOutlineDeliveryDining className="text-white" size={40} />
+                </div>
+                <div className="flex flex-col gap-3">
+                  <h6 className="text-green-500 font-semibold">Step 3</h6>
+                  <h5 className="text-xl font-semibold">Order & Delivery</h5>
+                  <p className="text-gray-500">
+                    The order is processed, and groceries are delivered to the
+                    user’s location (or prepared for pickup).
+                  </p>
+                </div>
+              </div>
+            </div>
+          
         </div>
+      </section>
 
-        <div className="flex justify-between  flex-wrap">
-
-          <div className="flex flex-1 flex-col items-center text-center gap-4 min-w-75">
-            <div className="bg-green-500 p-2  rounded-full">
-              <TbShoppingCartSearch className="text-white" size={40} />
-            </div>
-            <div className="flex flex-col gap-3">
-              <h6 className="text-green-500 font-semibold">Step 1</h6>
-              <h5 className="text-xl font-semibold">Browse & Select Products</h5>
-              <p className="text-gray-500">
-                Users explore available grocery items, search for what they need, and add products to their cart.
-              </p>
-            </div>
+      <section className="bg-green-500 p-12 flex items-center justify-center">
+        <div className="flex flex-col gap-4">
+          <h2 className="sm:text-4xl text-3xl font-bold text-center text-white">
+            Ready to Start Shopping?
+          </h2>
+          <h5 className="text-center text-white text-lg">
+            Join thousands of smart shoppers who are already saving money on
+            their groceries. Start <br />
+            shopping today-it's completely free!{" "}
+          </h5>
+          <div className="flex justify-center">
+            <button className="p-2 flex gap-3 items-center bg-gray-100 w-fit rounded-lg font-semibold">
+              <MdOutlineShoppingCartCheckout size={20} /> Start Shopping
+            </button>
           </div>
-
-          <div className="flex flex-1 flex-col items-center text-center gap-4 min-w-75">
-            <div className="bg-green-500 p-2 rounded-full">
-              <IoBagCheckOutline className="text-white" size={40} />
-            </div>
-            <div className="flex flex-col gap-3">
-              <h6 className="text-green-500 font-semibold">Step 2</h6>
-              <h5 className="text-xl font-semibold">Review Cart & Checkout</h5>
-              <p className="text-gray-500">
-                They view selected items, adjust quantities if needed, and proceed to checkout to place their order.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-1 flex-col items-center gap-4 text-center min-w-75">
-            <div className="bg-green-500 p-2 rounded-full">
-              <MdOutlineDeliveryDining className="text-white" size={40} />
-            </div>
-            <div className="flex flex-col gap-3">
-              <h6 className="text-green-500 font-semibold">Step 3</h6>
-              <h5 className="text-xl font-semibold">Order & Delivery</h5>
-              <p className="text-gray-500">
-                The order is processed, and groceries are delivered to the user’s location (or prepared for pickup).
-              </p>
-            </div>
-          </div>
-
-
         </div>
       </section>
     </div>
