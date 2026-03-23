@@ -116,48 +116,48 @@ const Landing = () => {
         </div>
       </section>
 
-      <section>
-        <div>
-          <h2>How It Works</h2>
-          <h5>Start saving in three simple steps</h5>
+      <section className="flex flex-col sm:p-20 gap-14 ">
+        <div className="flex flex-col items-center gap-4">
+          <h2 className="text-3xl font-semibold">How It Works</h2>
+          <h5 className="text-gray-500 text-lg">Start saving in three simple steps</h5>
         </div>
 
-        <div>
+        <div className="flex justify-between  flex-wrap">
 
-          <div>
-            <div>
-              <TbShoppingCartSearch size={30} />
+          <div className="flex flex-1 flex-col items-center text-center gap-4 min-w-75">
+            <div className="bg-green-500 p-2  rounded-full">
+              <TbShoppingCartSearch className="text-white" size={40} />
             </div>
-            <div>
-              <h6>Step 1</h6>
-              <h5>Browse & Select Products</h5>
-              <p>
+            <div className="flex flex-col gap-3">
+              <h6 className="text-green-500 font-semibold">Step 1</h6>
+              <h5 className="text-xl font-semibold">Browse & Select Products</h5>
+              <p className="text-gray-500">
                 Users explore available grocery items, search for what they need, and add products to their cart.
               </p>
             </div>
           </div>
 
-          <div>
-            <div>
-              <IoBagCheckOutline size={30} />
+          <div className="flex flex-1 flex-col items-center text-center gap-4 min-w-75">
+            <div className="bg-green-500 p-2 rounded-full">
+              <IoBagCheckOutline className="text-white" size={40} />
             </div>
-            <div>
-              <h6>Step 2</h6>
-              <h5>Review Cart & Checkout</h5>
-              <p>
+            <div className="flex flex-col gap-3">
+              <h6 className="text-green-500 font-semibold">Step 2</h6>
+              <h5 className="text-xl font-semibold">Review Cart & Checkout</h5>
+              <p className="text-gray-500">
                 They view selected items, adjust quantities if needed, and proceed to checkout to place their order.
               </p>
             </div>
           </div>
 
-          <div>
-            <div>
-              <MdOutlineDeliveryDining />
+          <div className="flex flex-1 flex-col items-center gap-4 text-center min-w-75">
+            <div className="bg-green-500 p-2 rounded-full">
+              <MdOutlineDeliveryDining className="text-white" size={40} />
             </div>
-            <div>
-              <h6>Step 3</h6>
-              <h5>Order & Delivery</h5>
-              <p>
+            <div className="flex flex-col gap-3">
+              <h6 className="text-green-500 font-semibold">Step 3</h6>
+              <h5 className="text-xl font-semibold">Order & Delivery</h5>
+              <p className="text-gray-500">
                 The order is processed, and groceries are delivered to the user’s location (or prepared for pickup).
               </p>
             </div>
