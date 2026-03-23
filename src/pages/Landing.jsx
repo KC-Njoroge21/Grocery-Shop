@@ -1,4 +1,7 @@
 import React from "react";
+import { TbShoppingCartSearch } from "react-icons/tb";
+import { IoBagCheckOutline } from "react-icons/io5";
+import { MdOutlineDeliveryDining } from "react-icons/md";
 
 const Landing = () => {
   return (
@@ -110,6 +113,57 @@ const Landing = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h2>How It Works</h2>
+          <h5>Start saving in three simple steps</h5>
+        </div>
+
+        <div>
+
+          <div>
+            <div>
+              <TbShoppingCartSearch size={30} />
+            </div>
+            <div>
+              <h6>Step 1</h6>
+              <h5>Browse & Select Products</h5>
+              <p>
+                Users explore available grocery items, search for what they need, and add products to their cart.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <IoBagCheckOutline size={30} />
+            </div>
+            <div>
+              <h6>Step 2</h6>
+              <h5>Review Cart & Checkout</h5>
+              <p>
+                They view selected items, adjust quantities if needed, and proceed to checkout to place their order.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <MdOutlineDeliveryDining />
+            </div>
+            <div>
+              <h6>Step 3</h6>
+              <h5>Order & Delivery</h5>
+              <p>
+                The order is processed, and groceries are delivered to the user’s location (or prepared for pickup).
+              </p>
+            </div>
+          </div>
+
+
         </div>
       </section>
     </div>
