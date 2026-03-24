@@ -3,10 +3,15 @@ import { MdProductionQuantityLimits } from "react-icons/md";
 import { MdDiscount } from "react-icons/md";
 import { MdOutlinePriceChange } from "react-icons/md";
 import groceries from '../components/data';
+import SingleProduct from '../components/SingleProduct';
 
 const Products = () => {
 
-  
+  const allProducts = groceries.map((item) => {
+    return (
+      <SingleProduct key={item.id} item={item} />
+    )
+  } )
 
   return (
     <div className='pt-20'>
@@ -52,6 +57,12 @@ const Products = () => {
           <input className='p-2 rounded-lg bg-gray-200 w-full' type="text" placeholder='Search products, brands, or categories...'  />
           <button className='w-[10%] bg-black text-white min-w-20 font-semibold rounded-lg'>Search </button>
         </form>
+      </section>
+
+      <section>
+        <div>
+          {allProducts}
+        </div>
       </section>
     </div>
   )
