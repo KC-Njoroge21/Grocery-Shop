@@ -1,5 +1,6 @@
 import React from 'react'
 import { IoCartOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -9,7 +10,9 @@ const Header = () => {
         <h3 className='sm:text-3xl text-xl font-bold'>Grocery Shop</h3>
       </div>
 
-    <button className='p-2 text-white font-semibold rounded-lg bg-black'>Get Started</button>
+    <Link to={'/products'}>
+      <button className='p-2 text-white font-semibold rounded-lg bg-black'>Get Started</button>
+    </Link>
     </header>
   )
 }

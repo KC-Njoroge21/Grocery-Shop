@@ -147,7 +147,7 @@ const Landing = () => {
               </h5>
             </div>
 
-            <div className="flex justify-between  flex-wrap">
+            <div className="flex justify-between gap-6 flex-wrap">
               <div className="flex flex-1 flex-col items-center text-center gap-4 min-w-75">
                 <div className="bg-green-500 p-2  rounded-full">
                   <TbShoppingCartSearch className="text-white" size={40} />
