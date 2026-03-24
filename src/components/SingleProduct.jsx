@@ -1,6 +1,20 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { cartActions } from '../store/cart-slice';
 
 const SingleProduct = (props) => {
+
+  const dispatch = useDispatch();
+
+  const addToCart = () => {
+    dispatch(cartActions.addToCart({
+      id: props.item.id,
+      name:props.item.name,
+      price: props.item.price,
+
+    }))
+  }
+
   return (
     <div className='flex w-1/4 min-w-75 border rounded-xl border-gray-300 flex-col gap-8 p-6'>
 
@@ -21,7 +35,7 @@ const SingleProduct = (props) => {
       </div>
 
       <div className='flex justify-center'>
-        <button className='p-2 w-3/4 bg-black text-white rounded-lg font-semibold'>Add to Cart</button>
+        <button onClick={addToCart} className='p-2 w-3/4 bg-black text-white rounded-lg font-semibold'>Add to Cart</button>
       </div>
 
     </div>
