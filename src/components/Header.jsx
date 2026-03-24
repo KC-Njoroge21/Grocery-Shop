@@ -10,6 +10,10 @@ const Header = () => {
         <h3 className='sm:text-3xl text-xl font-bold'>Grocery Shop</h3>
       </div>
 
+      <Link to={'/cart'}>
+         <button className='p-2 text-white font-semibold rounded-lg bg-black'>Cart</button>
+      </Link>
+
     <Link to={'/products'}>
       <button className='p-2 text-white font-semibold rounded-lg bg-black'>Get Started</button>
     </Link>

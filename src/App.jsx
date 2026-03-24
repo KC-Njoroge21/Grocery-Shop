@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import Landing from './pages/Landing'
 import Header from './components/Header'
 import Products from './pages/Products'
+import Cart from './pages/Cart'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/products' element={<Products />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
     </div>
   )
