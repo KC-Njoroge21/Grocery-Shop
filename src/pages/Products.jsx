@@ -60,7 +60,7 @@ const Products = () => {
       </section>
 
       <section>
-        <div>
+        <div className='flex flex-wrap gap-5 justify-center'>
           {allProducts}
         </div>
       </section>
