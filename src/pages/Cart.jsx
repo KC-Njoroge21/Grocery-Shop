@@ -13,7 +13,7 @@ const Cart = () => {
   })
 
   return (
-    <div className=''>
+    <div className='flex flex-col gap-5'>
       <section className='pt-20 flex flex-col gap-4'>
         <div className='flex flex-col p-4'>
           <h2 className='text-3xl font-bold'>Cart List</h2>
@@ -41,7 +41,7 @@ const Cart = () => {
       </section>
       
       <section className=''>
-        <div className='p-8 flex flex-col gap-4'>
+        <div className=' sm:p-8 flex flex-col gap-4'>
           {allItems}
         </div>
       </section>

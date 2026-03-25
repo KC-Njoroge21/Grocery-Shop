@@ -1,8 +1,14 @@
 import React from "react";
+import { FiMinus } from "react-icons/fi";
+import { LuPlus } from "react-icons/lu";
+
 
 const CartProduct = (props) => {
+
+
+
   return (
-    <div className="flex w-full min-w-75 border rounded-xl border-gray-300 flex-col gap-8 p-6">
+    <div className="flex  min-w-75 border rounded-xl border-gray-300 flex-col gap-8 p-6">
       <div className="flex gap-6">
         <div className="w-20 h-20 border border-gray-200 rounded-xl bg-gray-200 p-2">
         <img src={props.item.image} alt={props.item.name} />
@@ -24,10 +30,10 @@ const CartProduct = (props) => {
           </div>
 
           <div>
-            <div>
-              <button></button>
-              <h6></h6>
-              <button></button>
+            <div className="flex items-center gap-4">
+              <button className="p-2 border-gray-300 border rounded-lg focus:bg-gray-300 "><FiMinus size={10} /></button>
+              <h6>{props.item.quantity}</h6>
+              <button className="p-2 border-gray-300 border rounded-lg focus:bg-gray-300 "><LuPlus size={10} /></button>
             </div>
           </div>
 
