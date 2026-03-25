@@ -11,12 +11,14 @@ const cartSlice = createSlice({
       const newItem = action.payload
 
       const itemExists = state.groceryShoppingList.find((item) => {
-        item.id === newItem.id
+        return (
+          item.id === newItem.id
+        )
       })
 
       if (itemExists) {
-        state.groceryShoppingList.quantity++;
-        state.groceryShoppingList.price +=state.groceryShoppingList.totalPrice;
+        itemExists.quantity++;
+        itemExists.totalPrice += newItem.price;
       } 
       else {
         state.groceryShoppingList.push({
@@ -24,11 +26,14 @@ const cartSlice = createSlice({
           name: newItem.name,
           price: newItem.price,
           quantity: 1,
+          totalPrice: newItem.price,
           image: newItem.image,
           category: newItem.category,
           source: newItem.source
         })
       }
+
+      state.totalQuantity++
     }
   }
 })

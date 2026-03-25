@@ -14,13 +14,14 @@ const SingleProduct = (props) => {
       image: props.item.image,
       quantity: props.item.quantity,
       source: props.item.source,
-      category: props.item.category
+      category: props.item.category,
+      totalPrice: props.item.totalPrice
 
     }))
   }
 
   return (
-    <div className='flex w-1/4 min-w-75 border rounded-xl border-gray-300 flex-col gap-8 p-6'>
+    <div key={props.item.id} className='flex w-1/4 min-w-75 border rounded-xl border-gray-300 flex-col gap-8 p-6'>
 
       <div className='flex gap-6'>
         <div className='w-20 h-20 border border-gray-200 rounded-xl bg-gray-200 p-2'><img className='object-cover w-full h-full'  src={props.item.image} alt={props.item.name}  /></div>

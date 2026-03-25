@@ -1,14 +1,29 @@
 import React from "react";
 import { FiMinus } from "react-icons/fi";
 import { LuPlus } from "react-icons/lu";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../store/cart-slice";
 
 
 const CartProduct = (props) => {
 
+  const dispatch = useDispatch()
 
+  const incrementQuantity = () => {
+    dispatch(cartActions.addToCart({
+      id: props.item.id,
+      name:props.item.name,
+      price: props.item.price,
+      image: props.item.image,
+      quantity: props.item.quantity,
+      source: props.item.source,
+      category: props.item.category,
+      totalPrice: props.item.totalPrice
+    }))
+  }
 
   return (
-    <div className="flex  min-w-75 border rounded-xl border-gray-300 flex-col gap-8 p-6">
+    <div key={props.item.id} className="flex min-w-75 border rounded-xl border-gray-300 flex-col gap-8 p-6">
       <div className="flex gap-6">
         <div className="w-20 h-20 border border-gray-200 rounded-xl bg-gray-200 p-2">
         <img src={props.item.image} alt={props.item.name} />
@@ -29,11 +44,14 @@ const CartProduct = (props) => {
             </h2>
           </div>
 
-          <div>
+          <div className="flex items-center gap-5">
             <div className="flex items-center gap-4">
               <button className="p-2 border-gray-300 border rounded-lg focus:bg-gray-300 "><FiMinus size={10} /></button>
               <h6>{props.item.quantity}</h6>
-              <button className="p-2 border-gray-300 border rounded-lg focus:bg-gray-300 "><LuPlus size={10} /></button>
+              <button onClick={incrementQuantity} className="p-2 border-gray-300 border rounded-lg focus:bg-gray-300 "><LuPlus size={10} /></button>
+            </div>
+            <div>
+              <h6 className="font-semibold">Total: {props.item.totalPrice}</h6>
             </div>
           </div>
 

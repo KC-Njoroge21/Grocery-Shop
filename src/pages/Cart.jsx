@@ -6,9 +6,9 @@ const Cart = () => {
 
   const shoppingList = useSelector((state) => state.cart.groceryShoppingList)
 
-  const allItems = shoppingList.map((item) => {
+  const allItems = shoppingList.map((item, index) => {
     return (
-     <CartProduct key={item.id} item={item} />
+     <CartProduct key={index}  item={item} />
     )
   })
 

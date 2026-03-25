@@ -7,9 +7,9 @@ import SingleProduct from '../components/SingleProduct';
 
 const Products = () => {
 
-  const allProducts = groceries.map((item) => {
+  const allProducts = groceries.map((item, index) => {
     return (
-      <SingleProduct key={item.id} item={item} />
+      <SingleProduct key={index}  item={item} />
     )
   } )
 
