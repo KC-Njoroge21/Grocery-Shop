@@ -1,13 +1,14 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import CartProduct from '../components/CartProduct'
 
 const Cart = () => {
 
   const shoppingList = useSelector((state) => state.cart.groceryShoppingList)
 
-  const allItems = shoppingList.map(() => {
+  const allItems = shoppingList.map((item) => {
     return (
-      <div>u</div>
+     <CartProduct key={item.id} item={item} />
     )
   })
 
@@ -39,8 +40,10 @@ const Cart = () => {
         </div>
       </section>
       
-      <section>
-        {allItems}
+      <section className=''>
+        <div className='p-8 flex flex-col gap-4'>
+          {allItems}
+        </div>
       </section>
     </div>
   )

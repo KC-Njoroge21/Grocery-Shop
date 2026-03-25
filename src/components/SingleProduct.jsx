@@ -11,6 +11,10 @@ const SingleProduct = (props) => {
       id: props.item.id,
       name:props.item.name,
       price: props.item.price,
+      image: props.item.image,
+      quantity: props.item.quantity,
+      source: props.item.source,
+      category: props.item.category
 
     }))
   }

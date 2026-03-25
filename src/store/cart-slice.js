@@ -23,7 +23,10 @@ const cartSlice = createSlice({
           id: newItem.id,
           name: newItem.name,
           price: newItem.price,
-          quantity: newItem.quantity
+          quantity: 1,
+          image: newItem.image,
+          category: newItem.category,
+          source: newItem.source
         })
       }
     }
