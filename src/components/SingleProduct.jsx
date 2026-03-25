@@ -21,7 +21,7 @@ const SingleProduct = (props) => {
   }
 
   return (
-    <div key={props.item.id} className='flex w-1/4 min-w-75 border rounded-xl border-gray-300 flex-col gap-8 p-6'>
+    <div key={props.item.id} className='flex w-1/4 min-w-75 border rounded-xl border-gray-200 flex-col gap-8 p-6 hover:shadow-xl'>
 
       <div className='flex gap-6'>
         <div className='w-20 h-20 border border-gray-200 rounded-xl bg-gray-200 p-2'><img className='object-cover w-full h-full'  src={props.item.image} alt={props.item.name}  /></div>
@@ -40,7 +40,7 @@ const SingleProduct = (props) => {
       </div>
 
       <div className='flex justify-center'>
-        <button onClick={addToCart} className='p-2 w-3/4 bg-black text-white rounded-lg font-semibold'>Add to Cart</button>
+        <button onClick={addToCart} className='p-2 w-3/4 bg-black text-white rounded-lg font-semibold focus:opacity-75 cursor-pointer'>Add to Cart</button>
       </div>
 
     </div>
