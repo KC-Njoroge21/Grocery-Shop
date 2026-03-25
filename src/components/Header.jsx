@@ -15,7 +15,7 @@ const Header = () => {
       </Link>
 
     <Link to={'/products'}>
-      <button className='p-2 text-white font-semibold rounded-lg bg-black'>Get Started</button>
+      <button className='p-2 text-white font-semibold rounded-lg bg-black'>Started</button>
     </Link>
     </header>
   )
