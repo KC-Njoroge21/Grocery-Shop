@@ -34,6 +34,28 @@ const cartSlice = createSlice({
       }
 
       state.totalQuantity++
+    },
+
+    removeFromCart (state, action) {
+      const id = action.payload
+
+      const itemExists =  state.groceryShoppingList.find((item) => {
+        return (
+          item.id === id
+        )
+      })
+
+      if (itemExists.quantity === 1) {
+        state.groceryShoppingList.filter((item) => {
+          return (
+            item.id !== id 
+          )
+        })
+      } else {
+          itemExists.quantity--;
+          itemExists.totalPrice -=itemExists.price;
+       
+      }
     }
   }
 })
