@@ -22,6 +22,10 @@ const CartProduct = (props) => {
     }))
   }
 
+  const decrementQuantity = () => {
+    dispatch(cartActions.removeFromCart(props.item.id))
+  }
+
   return (
     <div key={props.item.id} className="flex min-w-75 border rounded-xl border-gray-300 flex-col gap-8 p-6">
       <div className="flex gap-6">
@@ -46,7 +50,7 @@ const CartProduct = (props) => {
 
           <div className="flex items-center gap-5">
             <div className="flex items-center gap-4">
-              <button className="p-2 border-gray-300 border rounded-lg focus:bg-gray-300 "><FiMinus size={10} /></button>
+              <button onClick={decrementQuantity} className="p-2 border-gray-300 border rounded-lg focus:bg-gray-300 "><FiMinus size={10} /></button>
               <h6>{props.item.quantity}</h6>
               <button onClick={incrementQuantity} className="p-2 border-gray-300 border rounded-lg focus:bg-gray-300 "><LuPlus size={10} /></button>
             </div>

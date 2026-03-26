@@ -46,7 +46,7 @@ const cartSlice = createSlice({
       })
 
       if (itemExists.quantity === 1) {
-        state.groceryShoppingList.filter((item) => {
+        state.groceryShoppingList = state.groceryShoppingList.filter((item) => {
           return (
             item.id !== id 
           )
