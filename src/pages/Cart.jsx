@@ -6,6 +6,8 @@ const Cart = () => {
 
   const shoppingList = useSelector((state) => state.cart.groceryShoppingList)
 
+  const totalQuantity =  useSelector((state) => state.cart.totalQuantity)
+
   const allItems = shoppingList.map((item, index) => {
     return (
      <CartProduct key={index}  item={item} />
@@ -24,7 +26,7 @@ const Cart = () => {
 
           <div className='border-r w-20% flex flex-col border-gray-300 p-2 sm:p-4'>
             <h6 className='text-gray-500'>Total Items</h6>
-            <h4 className='sm:text-3xl text-xl font-bold'>3</h4>
+            <h4 className='sm:text-3xl text-xl font-bold'>{totalQuantity}</h4>
           </div>
 
           <div className='border-r w-20% shrink flex flex-col p-2 border-gray-300 sm:p-4 '>
