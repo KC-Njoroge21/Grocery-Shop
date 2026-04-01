@@ -8,6 +8,12 @@ const Cart = () => {
 
   const totalQuantity =  useSelector((state) => state.cart.totalQuantity)
 
+  const totalPrice = shoppingList.reduce((total, item) => {
+    return (
+      total + item.totalPrice
+    )
+  }, 0)
+
   const allItems = shoppingList.map((item, index) => {
     return (
      <CartProduct key={index}  item={item} />
@@ -36,7 +42,7 @@ const Cart = () => {
 
           <div className=' w-60% shrink p-2 sm:p-4'>
             <h6 className='text-gray-500'> Total</h6>
-            <h4 className='font-bold sm:text-3xl text-xl text-green-500'> 24.77 /=</h4>
+            <h4 className='font-bold sm:text-3xl text-xl text-green-500'> {totalPrice.toFixed(2)}/=</h4>
           </div>
 
         </div>
